@@ -18,17 +18,17 @@ logger = logging.getLogger(__name__)
 
 # Mapping of SQLAlchemy types to detailed serialization information
 SQLALCHEMY_TYPE_MAPPING = {
-    Integer: {'name': 'Integer'},
-    String: {'name': 'String', 'args': ['length']},
-    Float: {'name': 'Float'},
-    Boolean: {'name': 'Boolean'},
-    DateTime: {'name': 'DateTime'},
-    Date: {'name': 'Date'},
-    Text: {'name': 'Text'},
-    Numeric: {'name': 'Numeric'},
-    LargeBinary: {'name': 'LargeBinary'},
-    Enum: {'name': 'Enum', 'args': ['enum_values']},
-    ARRAY: {'name': 'ARRAY', 'args': ['item_type']},
+    'Integer': {'name': 'Integer'},
+    'String': {'name': 'String', 'args': ['length']},
+    'Float': {'name': 'Float'},
+    'Boolean': {'name': 'Boolean'},
+    'DateTime': {'name': 'DateTime'},
+    'Date': {'name': 'Date'},
+    'Text': {'name': 'Text'},
+    'Numeric': {'name': 'Numeric'},
+    'LargeBinary': {'name': 'LargeBinary'},
+    'Enum': {'name': 'Enum', 'args': ['enum_values']},
+    'ARRAY': {'name': 'ARRAY', 'args': ['item_type']},
     # Add more types as needed
 }
 
@@ -54,9 +54,40 @@ def serialize_column(column):
     multiple foreign keys, and additional attributes like default values and uniqueness.
     """
     try:
-        col_type_info = SQLALCHEMY_TYPE_MAPPING.get(type(column.type))
-        if not col_type_info:
+        # Ensure that the object is an instance of Column
+        if not isinstance(column, Column):
+            raise TypeError(f"Expected Column object, got {type(column)} for column {getattr(column, 'name', 'unknown')}")
+
+        # Determine the type name using isinstance checks
+        if isinstance(column.type, Integer):
+            type_name = 'Integer'
+        elif isinstance(column.type, String):
+            type_name = 'String'
+        elif isinstance(column.type, Float):
+            type_name = 'Float'
+        elif isinstance(column.type, Boolean):
+            type_name = 'Boolean'
+        elif isinstance(column.type, DateTime):
+            type_name = 'DateTime'
+        elif isinstance(column.type, Date):
+            type_name = 'Date'
+        elif isinstance(column.type, Text):
+            type_name = 'Text'
+        elif isinstance(column.type, Numeric):
+            type_name = 'Numeric'
+        elif isinstance(column.type, LargeBinary):
+            type_name = 'LargeBinary'
+        elif isinstance(column.type, Enum):
+            type_name = 'Enum'
+        elif isinstance(column.type, ARRAY):
+            type_name = 'ARRAY'
+        else:
             raise ValueError(f"Unsupported column type: {type(column.type)} for column {column.name}")
+
+        # Fetch type-specific serialization info
+        col_type_info = SQLALCHEMY_TYPE_MAPPING.get(type_name)
+        if not col_type_info:
+            raise ValueError(f"No serialization info found for type: {type_name}")
 
         # Handle type-specific arguments
         col_type = {'type': col_type_info['name']}
@@ -80,7 +111,7 @@ def serialize_column(column):
             'unique': column.unique,
             'default': str(column.default.arg) if column.default else None,
             'foreign_keys': [],
-            'index': any(index.columns for index in column.indexes)
+            'index': False  # Default to False
         }
 
         # Serialize multiple foreign keys if present
@@ -92,9 +123,15 @@ def serialize_column(column):
                     'schema': fk.column.table.schema  # Include schema for robustness
                 })
 
+        # Safely access the 'indexes' attribute
+        # Some Column objects may not have 'indexes' due to SQLAlchemy version or ORM usage
+        indexes = getattr(column, 'indexes', None)
+        if indexes is not None:
+            col_dict['index'] = any(index.columns for index in indexes)
+
         return col_dict
     except Exception as e:
-        logger.error(f"Error serializing column {column.name}: {e}")
+        logger.error(f"Error serializing column {getattr(column, 'name', 'unknown')}: {e}")
         raise
 
 def deserialize_column(col_dict, metadata):
@@ -152,33 +189,6 @@ def deserialize_column(col_dict, metadata):
     except Exception as e:
         logger.error(f"Error deserializing column {col_dict['name']}: {e}")
         raise
-
-def topological_sort(dependency_graph):
-    """
-    Performs a topological sort on the dependency graph to determine the order of table creation.
-    Returns a sorted list of tables or None if a cycle is detected.
-    """
-    in_degree = defaultdict(int)
-    for deps in dependency_graph.values():
-        for dep in deps:
-            in_degree[dep] += 1
-
-    queue = deque([table for table in dependency_graph if in_degree[table] == 0])
-
-    sorted_list = []
-    while queue:
-        table = queue.popleft()
-        sorted_list.append(table)
-        for dependent in dependency_graph:
-            if table in dependency_graph[dependent]:
-                in_degree[dependent] -= 1
-                if in_degree[dependent] == 0:
-                    queue.append(dependent)
-
-    if len(sorted_list) != len(dependency_graph):
-        logger.error("Cycle detected in dependency graph.")
-        return None  # Cycle detected
-    return sorted_list
 
 def backup_database(db_url, output_file, include_relationships=False, version="1.0"):
     """
@@ -313,8 +323,19 @@ def restore_database(db_url, input_file, max_retries=5, retry_delay=5):
                             # Add indexes
                             indexes = table_info['schema'].get('indexes', [])
                             for idx in indexes:
-                                index_columns = [col for col in new_table.c if col.name in idx]
-                                new_table.append_constraint(Index(idx, *index_columns))
+                                # Fetch column objects based on index name
+                                # This assumes that index names are in the format 'ix_<table>_<column>'
+                                # Adjust parsing logic based on your actual index naming conventions
+                                index_columns = []
+                                for col_name in new_table.c.keys():
+                                    if col_name in idx:
+                                        index_columns.append(new_table.c[col_name])
+                                if index_columns:
+                                    index_obj = Index(idx, *index_columns)
+                                    new_table.append_constraint(index_obj)
+                                else:
+                                    logger.warning(f"No matching columns found for index '{idx}' in table '{table_name}'.")
+
                         else:
                             logger.info(f"Table {table_name} already defined in metadata.")
 
@@ -322,20 +343,8 @@ def restore_database(db_url, input_file, max_retries=5, retry_delay=5):
                     metadata.create_all(engine)
                     logger.info("All tables created successfully.")
 
-                    # Insert data into all tables
-                    # To respect dependencies, perform topological sort
-                    dependency_graph = defaultdict(set)
+                    # Insert data into all tables without considering dependencies
                     for table_name, table_info in backup_data['tables'].items():
-                        for fk in table_info['schema']['columns']:
-                            for foreign_key in fk.get('foreign_keys', []):
-                                dependency_graph[table_name].add(foreign_key['table'])
-
-                    sorted_tables = topological_sort(dependency_graph)
-                    if not sorted_tables:
-                        raise ValueError("Cannot perform restore due to cyclic dependencies.")
-
-                    for table_name in sorted_tables:
-                        table_info = backup_data['tables'][table_name]
                         table = Table(table_name, metadata, autoload_with=engine)
                         logger.info(f"Restoring data for table: {table_name}")
 
@@ -359,7 +368,14 @@ def restore_database(db_url, input_file, max_retries=5, retry_delay=5):
                                             row[col] = datetime.fromisoformat(row[col])
                                         except ValueError:
                                             # Handle other datetime formats if necessary
-                                            row[col] = datetime.strptime(row[col], '%Y-%m-%d %H:%M:%S.%f')
+                                            try:
+                                                row[col] = datetime.strptime(row[col], '%Y-%m-%d %H:%M:%S.%f')
+                                            except ValueError:
+                                                try:
+                                                    row[col] = datetime.strptime(row[col], '%Y-%m-%d %H:%M:%S')
+                                                except ValueError:
+                                                    logger.warning(f"Unrecognized datetime format for column '{col}' in table '{table_name}': {row[col]}")
+                                                    row[col] = None
                                 processed_rows.append(row)
 
                             # Insert processed rows
