@@ -1,0 +1,1223 @@
+{
+    "items": {
+        "schema": {
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "String",
+                    "nullable": false,
+                    "primary_key": true,
+                    "foreign_key": null
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "quantity",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "category_id",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": {
+                        "column": "id",
+                        "table": "categories"
+                    }
+                },
+                {
+                    "name": "created_at",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "updated_at",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                }
+            ]
+        },
+        "data": [
+            {
+                "id": 1,
+                "name": "ANALOG INPUT MODULE",
+                "description": "MISTUBISHI Q64AD-GH",
+                "quantity": 3,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:27:46.668405",
+                "updated_at": "2024-09-12 13:27:46.668410"
+            },
+            {
+                "id": 2,
+                "name": "4096 I/O POINTS, 30 K STEPS(120KB) CPU",
+                "description": "MISTUBISHI Q03UDVCPU",
+                "quantity": 5,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:31:00.178152",
+                "updated_at": "2024-09-12 13:31:00.178154"
+            },
+            {
+                "id": 3,
+                "name": "MODBUS COMMUNICATION MODULE",
+                "description": "MISTUBISHI QJ71MB91",
+                "quantity": 3,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:31:44.328682",
+                "updated_at": "2024-09-12 13:31:44.328686"
+            },
+            {
+                "id": 4,
+                "name": "ANALOG INPUT MODULE",
+                "description": "MISTUBISHI Q68AD1",
+                "quantity": 4,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:32:43.269773",
+                "updated_at": "2024-09-12 13:32:43.269778"
+            },
+            {
+                "id": 5,
+                "name": "DIGITAL INPUT MODULE",
+                "description": "MISTUBISHI QX80",
+                "quantity": 5,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:33:51.506474",
+                "updated_at": "2024-09-12 13:33:51.506477"
+            },
+            {
+                "id": 6,
+                "name": "HMI",
+                "description": "MISTUBISHI GT271S-XTBD",
+                "quantity": 3,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:34:48.954508",
+                "updated_at": "2024-09-12 13:34:48.954512"
+            },
+            {
+                "id": 7,
+                "name": "EMPTY SLOT COVER",
+                "description": "MISTUBISHI QG60",
+                "quantity": 15,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:36:10.847172",
+                "updated_at": "2024-09-12 13:36:10.847175"
+            },
+            {
+                "id": 8,
+                "name": "POWER SUPPLY MODULE",
+                "description": "MISTUBISHI Q61P",
+                "quantity": 5,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:36:55.123407",
+                "updated_at": "2024-09-12 13:36:55.123411"
+            },
+            {
+                "id": 9,
+                "name": "DIGITAL OUTPUT MODULE",
+                "description": "MISTUBISHI QY10",
+                "quantity": 5,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:37:28.827446",
+                "updated_at": "2024-09-12 13:37:28.827450"
+            },
+            {
+                "id": 10,
+                "name": "BASE RACK",
+                "description": "MISTUBISHI Q38B",
+                "quantity": 5,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:38:01.146160",
+                "updated_at": "2024-09-12 13:38:01.146164"
+            },
+            {
+                "id": 11,
+                "name": "COMPACT PLC 16 I/O",
+                "description": "MISTUBISHI FX5U-32MR/ES",
+                "quantity": 1,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:39:15.823610",
+                "updated_at": "2024-09-12 13:39:15.823614"
+            },
+            {
+                "id": 12,
+                "name": "MINIATURE CIRCUIT BREAKER 1-pole+N - 3 AMPERE 92.6HX36W MILLIMETER TO FEED HMI",
+                "description": "MISTUBISHI BHW-T10 1P+N TYPE C 3A (1 PACK)",
+                "quantity": 1,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:41:51.176458",
+                "updated_at": "2024-09-12 13:41:51.176462"
+            },
+            {
+                "id": 13,
+                "name": "MINIATURE CIRCUIT BREAKER 1-pole+N - 1 AMPERE 92.6HX36W MILLIMETER TO FEED RTU",
+                "description": "MITSUBISHI BHW-T10 1P+N TYPE C 1A (4 PACKS)",
+                "quantity": 4,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:47:10.466082",
+                "updated_at": "2024-09-12 13:47:10.466098"
+            },
+            {
+                "id": 14,
+                "name": "MAIN MINIATURE CIRCUIT BREAKER 1-pole+N - 16 AMPERE 92.6HX36W MILLIMETER FROM MAINS",
+                "description": "MITSUBISHI BHW-T10 1P+N TYPE C 16A (2 PACKS)",
+                "quantity": 2,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:48:49.552702",
+                "updated_at": "2024-09-12 13:48:49.552707"
+            },
+            {
+                "id": 15,
+                "name": "MINIATURE CIRCUIT BREAKER 1-pole+N - 2 AMPERE 92.6HX36W MILLIMETER FROM TO AC TB",
+                "description": "MITSUBISHI BHW-T10 1P+N TYPE C 2A (1 PACKS)",
+                "quantity": 1,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:50:36.784807",
+                "updated_at": "2024-09-12 13:50:36.784812"
+            },
+            {
+                "id": 16,
+                "name": "MINIATURE CIRCUIT BREAKER 1-pole+N - 6 AMPERE 92.6HX36W MILLIMETER FROM TO SPARE",
+                "description": "MITSUBISHI BHW-T10 1P+N TYPE C 6A (2 PACKS)",
+                "quantity": 2,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:51:40.332867",
+                "updated_at": "2024-09-12 13:51:40.332871"
+            },
+            {
+                "id": 17,
+                "name": "MODBUS COMMUNICATION MODULE",
+                "description": "MITSUBISHI QJ71MT91",
+                "quantity": 2,
+                "category_id": 1,
+                "created_at": "2024-09-12 13:58:53.078895",
+                "updated_at": "2024-09-12 13:58:53.078899"
+            },
+            {
+                "id": 18,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/A40-30-10/60A/240V/ABB",
+                "quantity": 3,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:20:26.300757",
+                "updated_at": "2024-09-24 12:20:26.300762"
+            },
+            {
+                "id": 19,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/A26-30-10/45A/240VAC/ABB",
+                "quantity": 2,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:22:32.830623",
+                "updated_at": "2024-09-24 12:22:32.830627"
+            },
+            {
+                "id": 20,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/A9-30-10/25A/240VAC/ABB",
+                "quantity": 3,
+                "category_id": 1,
+                "created_at": "2024-09-24 12:23:13.161572",
+                "updated_at": "2024-09-24 12:23:13.161576"
+            },
+            {
+                "id": 21,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/A20D-30-01(G)/45A/220VAC/ABB",
+                "quantity": 2,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:24:08.585952",
+                "updated_at": "2024-09-24 12:24:08.585956"
+            },
+            {
+                "id": 22,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/32A/110VAC/LC1D09F7/TELEMECANIQUE",
+                "quantity": 3,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:25:50.599246",
+                "updated_at": "2024-09-24 12:25:50.599250"
+            },
+            {
+                "id": 23,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/4KW/9A/110V AC/LC1D09F7/TELEMECANIQUE",
+                "quantity": 3,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:27:17.480544",
+                "updated_at": "2024-09-24 12:27:17.480549"
+            },
+            {
+                "id": 24,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/LC1D09P7/4KW/25A/220V AC/TELEMECANIQUE",
+                "quantity": 3,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:29:00.458378",
+                "updated_at": "2024-09-24 12:29:00.458382"
+            },
+            {
+                "id": 25,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/LC1D12/5.5KW/12A/220V AC/TELEMECANIQUE",
+                "quantity": 3,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:30:58.485717",
+                "updated_at": "2024-09-24 12:30:58.485721"
+            },
+            {
+                "id": 26,
+                "name": "CONTACTOR",
+                "description": "CONTACTOR/LC1D18M7/230V AC/SCODA",
+                "quantity": 2,
+                "category_id": 2,
+                "created_at": "2024-09-24 12:31:56.902981",
+                "updated_at": "2024-09-24 12:31:56.902985"
+            },
+            {
+                "id": 27,
+                "name": "QG60",
+                "description": "QG60",
+                "quantity": 15,
+                "category_id": 3,
+                "created_at": "2024-09-25 15:48:27.617619",
+                "updated_at": "2024-09-25 15:48:27.617623"
+            },
+            {
+                "id": 28,
+                "name": "Q64AD-6H",
+                "description": "Q64AD-6H",
+                "quantity": 3,
+                "category_id": 3,
+                "created_at": "2024-09-25 15:49:04.795707",
+                "updated_at": "2024-09-25 15:49:04.795711"
+            },
+            {
+                "id": 29,
+                "name": "Q03UDVCPU",
+                "description": "Q03UDVCPU",
+                "quantity": 1,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:27:02.109099",
+                "updated_at": "2024-09-26 07:27:02.109103"
+            },
+            {
+                "id": 30,
+                "name": "Q03UDECPU",
+                "description": "Q03UDECPU",
+                "quantity": 1,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:27:21.816989",
+                "updated_at": "2024-09-26 07:27:21.816993"
+            },
+            {
+                "id": 31,
+                "name": "Q68AD1",
+                "description": "Q68AD1",
+                "quantity": 4,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:27:56.387345",
+                "updated_at": "2024-09-26 07:27:56.387351"
+            },
+            {
+                "id": 32,
+                "name": "QJ71MT91",
+                "description": "QJ71MT91",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:28:13.931610",
+                "updated_at": "2024-09-26 07:28:13.931613"
+            },
+            {
+                "id": 33,
+                "name": "Q61P",
+                "description": "Q61P",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:28:51.952002",
+                "updated_at": "2024-09-26 07:28:51.952007"
+            },
+            {
+                "id": 34,
+                "name": "QX80",
+                "description": "QX80",
+                "quantity": 1,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:31:43.697286",
+                "updated_at": "2024-09-26 07:31:43.697290"
+            },
+            {
+                "id": 35,
+                "name": "QY10",
+                "description": "QY10",
+                "quantity": 4,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:32:17.663460",
+                "updated_at": "2024-09-26 07:32:17.663464"
+            },
+            {
+                "id": 36,
+                "name": "Q38B",
+                "description": "Q38B",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:32:37.418771",
+                "updated_at": "2024-09-26 07:32:37.418775"
+            },
+            {
+                "id": 37,
+                "name": "Q65B",
+                "description": "Q65B",
+                "quantity": 3,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:33:02.079763",
+                "updated_at": "2024-09-26 07:33:02.079767"
+            },
+            {
+                "id": 38,
+                "name": "REDUNDANCY MODULE (PSU)",
+                "description": "3 were used on the RTU Panel",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:33:57.476347",
+                "updated_at": "2024-09-26 07:33:57.476350"
+            },
+            {
+                "id": 39,
+                "name": "PSU 220VAC-24VDC",
+                "description": "PSU 220VAC-24VDC",
+                "quantity": 5,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:34:50.109456",
+                "updated_at": "2024-09-26 07:34:50.109460"
+            },
+            {
+                "id": 40,
+                "name": "3ONDATA (RS232/485 - 485 HUB) GATEWAY",
+                "description": "3ONDATA (RS232/485 - 485 HUB) GATEWAY",
+                "quantity": 9,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:35:24.719232",
+                "updated_at": "2024-09-26 07:35:24.719236"
+            },
+            {
+                "id": 41,
+                "name": "MCB (2P 1A)",
+                "description": "MCB (2P 1A)",
+                "quantity": 6,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:35:53.185273",
+                "updated_at": "2024-09-26 07:35:53.185278"
+            },
+            {
+                "id": 42,
+                "name": "MCB (2P 2A)",
+                "description": "MCB (2P 2A)",
+                "quantity": 3,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:36:13.643220",
+                "updated_at": "2024-09-26 07:36:13.643225"
+            },
+            {
+                "id": 43,
+                "name": "MCB (2P 3A)",
+                "description": "MCB (2P 3A)",
+                "quantity": 3,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:36:57.347782",
+                "updated_at": "2024-09-26 07:36:57.347786"
+            },
+            {
+                "id": 44,
+                "name": "MCB (2P 6A)",
+                "description": "MCB (2P 6A)",
+                "quantity": 6,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:43:01.783104",
+                "updated_at": "2024-09-26 07:43:01.783108"
+            },
+            {
+                "id": 45,
+                "name": "MCB (2P 16A)",
+                "description": "1 A (1PCS)",
+                "quantity": 8,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:43:36.834966",
+                "updated_at": "2024-09-26 07:43:36.834970"
+            },
+            {
+                "id": 46,
+                "name": "INTRINSICALLY SAFE BARRIER (PEPPERL AND FUCHS)",
+                "description": "INTRINSICALLY SAFE BARRIER (PEPPERL AND FUCHS)",
+                "quantity": 15,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:44:17.570578",
+                "updated_at": "2024-09-26 07:44:17.570581"
+            },
+            {
+                "id": 47,
+                "name": "SPD422-1",
+                "description": "SPD422-1",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:44:40.282586",
+                "updated_at": "2024-09-26 07:44:40.282590"
+            },
+            {
+                "id": 48,
+                "name": "EMERGENCY PB",
+                "description": "EMERGENCY PB",
+                "quantity": 3,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:45:16.747221",
+                "updated_at": "2024-09-26 07:45:16.747225"
+            },
+            {
+                "id": 49,
+                "name": "GMI (G9410S)",
+                "description": "GMI (G9410S)",
+                "quantity": 98,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:45:43.949017",
+                "updated_at": "2024-09-26 07:45:43.949021"
+            },
+            {
+                "id": 50,
+                "name": "RJ45",
+                "description": "RJ45",
+                "quantity": 4,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:46:03.023138",
+                "updated_at": "2024-09-26 07:46:03.023141"
+            },
+            {
+                "id": 51,
+                "name": "RESISTOR",
+                "description": "RESISTOR",
+                "quantity": 2,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:46:18.684005",
+                "updated_at": "2024-09-26 07:47:29.641456"
+            },
+            {
+                "id": 52,
+                "name": "HONEYWELL FLOW COMPUTER",
+                "description": "HONEYWELL FLOW COMPUTER",
+                "quantity": 1,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:48:06.917110",
+                "updated_at": "2024-09-26 07:48:06.917114"
+            },
+            {
+                "id": 53,
+                "name": "HONEYWELL VOLUME CONVERTER (EK280)",
+                "description": "HONEYWELL VOLUME CONVERTER (EK280)",
+                "quantity": 8,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:48:37.325738",
+                "updated_at": "2024-09-26 07:48:37.325742"
+            },
+            {
+                "id": 54,
+                "name": "HONEYWELL JUNCTION BOX (FE260)",
+                "description": "HONEYWELL JUNCTION BOX (FE260)",
+                "quantity": 1,
+                "category_id": 3,
+                "created_at": "2024-09-26 07:48:54.578465",
+                "updated_at": "2024-09-26 07:48:54.578468"
+            }
+        ]
+    },
+    "categories": {
+        "schema": {
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "String",
+                    "nullable": false,
+                    "primary_key": true,
+                    "foreign_key": null
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "created_at",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                }
+            ]
+        },
+        "data": [
+            {
+                "id": 2,
+                "name": "INVENTORY OF ITEMS GOTTEN ON 26 AUGUST 2024",
+                "created_at": "2024-09-24 12:18:32.320076",
+                "description": "NOTE: \nNO. 7 LC1DO9 WILL HAVE TO BE RETURNED\nReceived Siemens S71200\nNO. 1 ONE A40-30-10 WILL BE RETURNED BECAUSE IT IS NOT NEW\n \n\n\nINVENTORY RECEIVED ON 30 AUGUST\n11 Packs of puls power supply CS5244\nOne honey well flow computer.\n\nINVENTORY RECEIVED ON 3RD September 3, 2024\n12 PACKS OF GATE WITH PART NO SW44851 \n\n"
+            },
+            {
+                "id": 1,
+                "name": "Training Room Inventory for RTU Panel",
+                "created_at": "2024-09-12 13:24:04.826133",
+                "description": "On 21st Aug some items where collect by aril such as;\n\u2022\t3 Cisco switches 3 server approved by GM.\nOn Thursday we got items from Aril such as. \n\u2022\tThe tagging machine with 3 extra cartridge.\n\nODUMEGWU collected some item from the training room to Aril such as;\n\n\u2022\tOld plc Mitsubishi( the complete hardware setup excluding the old cpu ).\n\u2022\t1 output and 1 input  card\n\u2022\t1 new cpu\n\u2022\t1 power supply (Advantech 24v)\n\u2022\t1200 siemens plc \n\u2022\t tester\n\u2022\t1 push button\n\u2022\t2 lamps.\n"
+            },
+            {
+                "id": 3,
+                "name": "Inventory at the Training Room (17 sept 2024)",
+                "created_at": "2024-09-25 15:19:03.035076",
+                "description": null
+            }
+        ]
+    },
+    "logs": {
+        "schema": {
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "String",
+                    "nullable": false,
+                    "primary_key": true,
+                    "foreign_key": null
+                },
+                {
+                    "name": "action",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "item_id",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": {
+                        "column": "id",
+                        "table": "items"
+                    }
+                },
+                {
+                    "name": "category_id",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": {
+                        "column": "id",
+                        "table": "categories"
+                    }
+                },
+                {
+                    "name": "quantity_change",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                },
+                {
+                    "name": "timestamp",
+                    "type": "String",
+                    "nullable": true,
+                    "primary_key": false,
+                    "foreign_key": null
+                }
+            ]
+        },
+        "data": [
+            {
+                "id": 1,
+                "action": "create_category",
+                "item_id": null,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Category: Training Room Inventory for RTU Panel",
+                "timestamp": "2024-09-12 13:24:04.985224"
+            },
+            {
+                "id": 2,
+                "action": "create_item",
+                "item_id": 1,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: ANALOG INPUT MODULE, Quantity: 3",
+                "timestamp": "2024-09-12 13:27:46.819547"
+            },
+            {
+                "id": 3,
+                "action": "create_item",
+                "item_id": 2,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: 4096 I/O POINTS, 30 K STEPS(120KB) CPU, Quantity: 5",
+                "timestamp": "2024-09-12 13:31:00.340255"
+            },
+            {
+                "id": 4,
+                "action": "create_item",
+                "item_id": 3,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MODBUS COMMUNICATION MODULE, Quantity: 3",
+                "timestamp": "2024-09-12 13:31:44.471249"
+            },
+            {
+                "id": 5,
+                "action": "create_item",
+                "item_id": 4,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: ANALOG INPUT MODULE, Quantity: 4",
+                "timestamp": "2024-09-12 13:32:43.432325"
+            },
+            {
+                "id": 6,
+                "action": "create_item",
+                "item_id": 5,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: DIGITAL INPUT MODULE, Quantity: 5",
+                "timestamp": "2024-09-12 13:33:51.720888"
+            },
+            {
+                "id": 7,
+                "action": "create_item",
+                "item_id": 6,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: HMI, Quantity: 3",
+                "timestamp": "2024-09-12 13:34:49.104922"
+            },
+            {
+                "id": 8,
+                "action": "create_item",
+                "item_id": 7,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: EMPTY SLOT COVER, Quantity: 15",
+                "timestamp": "2024-09-12 13:36:10.991785"
+            },
+            {
+                "id": 9,
+                "action": "create_item",
+                "item_id": 8,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: POWER SUPPLY MODULE, Quantity: 5",
+                "timestamp": "2024-09-12 13:36:55.274119"
+            },
+            {
+                "id": 10,
+                "action": "create_item",
+                "item_id": 9,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: DIGITAL OUTPUT MODULE, Quantity: 5",
+                "timestamp": "2024-09-12 13:37:28.977539"
+            },
+            {
+                "id": 11,
+                "action": "create_item",
+                "item_id": 10,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: BASE RACK, Quantity: 5",
+                "timestamp": "2024-09-12 13:38:01.298472"
+            },
+            {
+                "id": 12,
+                "action": "create_item",
+                "item_id": 11,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: COMPACT PLC 16 I/O, Quantity: 1",
+                "timestamp": "2024-09-12 13:39:15.982194"
+            },
+            {
+                "id": 13,
+                "action": "create_item",
+                "item_id": 12,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MINIATURE CIRCUIT BREAKER 1-pole+N - 3 AMPERE 92.6HX36W MILLIMETER TO FEED HMI, Quantity: 1",
+                "timestamp": "2024-09-12 13:41:51.370940"
+            },
+            {
+                "id": 14,
+                "action": "create_item",
+                "item_id": 13,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MINIATURE CIRCUIT BREAKER 1-pole+N - 1 AMPERE 92.6HX36W MILLIMETER TO FEED RTU, Quantity: 4",
+                "timestamp": "2024-09-12 13:47:10.614957"
+            },
+            {
+                "id": 15,
+                "action": "create_item",
+                "item_id": 14,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MAIN MINIATURE CIRCUIT BREAKER 1-pole+N - 16 AMPERE 92.6HX36W MILLIMETER FROM MAINS, Quantity: 2",
+                "timestamp": "2024-09-12 13:48:49.696085"
+            },
+            {
+                "id": 16,
+                "action": "create_item",
+                "item_id": 15,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MINIATURE CIRCUIT BREAKER 1-pole+N - 2 AMPERE 92.6HX36W MILLIMETER FROM TO AC TB, Quantity: 1",
+                "timestamp": "2024-09-12 13:50:36.932626"
+            },
+            {
+                "id": 17,
+                "action": "create_item",
+                "item_id": 16,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MINIATURE CIRCUIT BREAKER 1-pole+N - 6 AMPERE 92.6HX36W MILLIMETER FROM TO SPARE, Quantity: 2",
+                "timestamp": "2024-09-12 13:51:40.491941"
+            },
+            {
+                "id": 18,
+                "action": "create_item",
+                "item_id": 17,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: MODBUS COMMUNICATION MODULE, Quantity: 2",
+                "timestamp": "2024-09-12 13:58:53.322005"
+            },
+            {
+                "id": 19,
+                "action": "create_category",
+                "item_id": null,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Category: INVENTORY OF ITEMS GOTTEN ON 26 AUGUST 2024",
+                "timestamp": "2024-09-24 12:18:32.495048"
+            },
+            {
+                "id": 20,
+                "action": "create_item",
+                "item_id": 18,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:20:26.471373"
+            },
+            {
+                "id": 21,
+                "action": "create_item",
+                "item_id": 19,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 2",
+                "timestamp": "2024-09-24 12:22:32.985026"
+            },
+            {
+                "id": 22,
+                "action": "create_item",
+                "item_id": 20,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:23:13.332724"
+            },
+            {
+                "id": 23,
+                "action": "create_item",
+                "item_id": 21,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 2",
+                "timestamp": "2024-09-24 12:24:08.772018"
+            },
+            {
+                "id": 24,
+                "action": "create_item",
+                "item_id": 22,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:25:50.794159"
+            },
+            {
+                "id": 25,
+                "action": "create_item",
+                "item_id": 23,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:27:17.778284"
+            },
+            {
+                "id": 26,
+                "action": "create_item",
+                "item_id": 24,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:29:00.615021"
+            },
+            {
+                "id": 27,
+                "action": "create_item",
+                "item_id": 25,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 3",
+                "timestamp": "2024-09-24 12:30:58.809360"
+            },
+            {
+                "id": 28,
+                "action": "create_item",
+                "item_id": 26,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: CONTACTOR, Quantity: 2",
+                "timestamp": "2024-09-24 12:31:57.205003"
+            },
+            {
+                "id": 29,
+                "action": "update_category",
+                "item_id": null,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "The description was changed from 'None' to 'NOTE: \nNO. 7 LC1DO9 WILL HAVE TO BE RETURNED\nReceived Siemens S71200\nNO. 1 ONE A40-30-10 WILL BE RETURNED BECAUSE IT IS NOT NEW\n \n\n\nINVENTORY RECEIVED ON 30 AUGUST\n11 Packs of puls power supply CS5244\nOne honey well flow computer.\n\nINVENTORY RECEIVED ON 3RD September 3, 2024\n12 PACKS OF GATE WITH PART NO SW44851 \n\n'.",
+                "timestamp": "2024-09-24 15:58:29.913345"
+            },
+            {
+                "id": 30,
+                "action": "update_category",
+                "item_id": null,
+                "category_id": 1,
+                "quantity_change": null,
+                "description": "The description was changed from 'None' to 'On 21st Aug some items where collect by aril such as;\n\u2022\t3 Cisco switches 3 server approved by GM.\nOn Thursday we got items from Aril such as. \n\u2022\tThe tagging machine with 3 extra cartridge.\n\nODUMEGWU collected some item from the training room to Aril such as;\n\n\u2022\tOld plc Mitsubishi( the complete hardware setup excluding the old cpu ).\n\u2022\t1 output and 1 input  card\n\u2022\t1 new cpu\n\u2022\t1 power supply (Advantech 24v)\n\u2022\t1200 siemens plc \n\u2022\t tester\n\u2022\t1 push button\n\u2022\t2 lamps.\n'.",
+                "timestamp": "2024-09-25 15:38:22.019680"
+            },
+            {
+                "id": 31,
+                "action": "create_category",
+                "item_id": null,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Category: Inventory at the Training Room (17 sept 2024)",
+                "timestamp": "2024-09-25 15:45:18.601921"
+            },
+            {
+                "id": 32,
+                "action": "create_item",
+                "item_id": 27,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: QG60, Quantity: 15",
+                "timestamp": "2024-09-25 15:48:27.762172"
+            },
+            {
+                "id": 33,
+                "action": "create_item",
+                "item_id": 28,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q64AD-6H, Quantity: 3",
+                "timestamp": "2024-09-25 15:49:04.939645"
+            },
+            {
+                "id": 34,
+                "action": "create_item",
+                "item_id": 29,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q03UDVCPU, Quantity: 1",
+                "timestamp": "2024-09-26 07:27:02.267492"
+            },
+            {
+                "id": 35,
+                "action": "create_item",
+                "item_id": 30,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q03UDECPU, Quantity: 1",
+                "timestamp": "2024-09-26 07:27:22.009937"
+            },
+            {
+                "id": 36,
+                "action": "create_item",
+                "item_id": 31,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q68AD1, Quantity: 4",
+                "timestamp": "2024-09-26 07:27:56.544192"
+            },
+            {
+                "id": 37,
+                "action": "create_item",
+                "item_id": 32,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: QJ71MT91, Quantity: 2",
+                "timestamp": "2024-09-26 07:28:14.093178"
+            },
+            {
+                "id": 38,
+                "action": "create_item",
+                "item_id": 33,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q61P, Quantity: 2",
+                "timestamp": "2024-09-26 07:28:52.119231"
+            },
+            {
+                "id": 39,
+                "action": "create_item",
+                "item_id": 34,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: QX80, Quantity: 1",
+                "timestamp": "2024-09-26 07:31:43.866273"
+            },
+            {
+                "id": 40,
+                "action": "create_item",
+                "item_id": 35,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: QY10, Quantity: 4",
+                "timestamp": "2024-09-26 07:32:17.827989"
+            },
+            {
+                "id": 41,
+                "action": "create_item",
+                "item_id": 36,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q38B, Quantity: 2",
+                "timestamp": "2024-09-26 07:32:37.578537"
+            },
+            {
+                "id": 42,
+                "action": "create_item",
+                "item_id": 37,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: Q65B, Quantity: 3",
+                "timestamp": "2024-09-26 07:33:02.242258"
+            },
+            {
+                "id": 43,
+                "action": "create_item",
+                "item_id": 38,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: REDUNDANCY MODULE (PSU), Quantity: 2",
+                "timestamp": "2024-09-26 07:33:57.655205"
+            },
+            {
+                "id": 44,
+                "action": "create_item",
+                "item_id": 39,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: PSU 220VAC-24VDC, Quantity: 5",
+                "timestamp": "2024-09-26 07:34:50.274468"
+            },
+            {
+                "id": 45,
+                "action": "create_item",
+                "item_id": 40,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: 3ONDATA (RS232/485 - 485 HUB) GATEWAY, Quantity: 9",
+                "timestamp": "2024-09-26 07:35:24.870898"
+            },
+            {
+                "id": 46,
+                "action": "create_item",
+                "item_id": 41,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: MCB (2P 1A), Quantity: 6",
+                "timestamp": "2024-09-26 07:35:53.345599"
+            },
+            {
+                "id": 47,
+                "action": "create_item",
+                "item_id": 42,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: MCB (2P 2A), Quantity: 3",
+                "timestamp": "2024-09-26 07:36:13.794161"
+            },
+            {
+                "id": 48,
+                "action": "create_item",
+                "item_id": 43,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: MCB (2P 3A), Quantity: 3",
+                "timestamp": "2024-09-26 07:36:57.500379"
+            },
+            {
+                "id": 49,
+                "action": "create_item",
+                "item_id": 44,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: MCB (2P 6A), Quantity: 6",
+                "timestamp": "2024-09-26 07:43:01.937811"
+            },
+            {
+                "id": 50,
+                "action": "create_item",
+                "item_id": 45,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: MCB (2P 16A), Quantity: 8",
+                "timestamp": "2024-09-26 07:43:36.991603"
+            },
+            {
+                "id": 51,
+                "action": "create_item",
+                "item_id": 46,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: INTRINSICALLY SAFE BARRIER (PEPPERL AND FUCHS), Quantity: 15",
+                "timestamp": "2024-09-26 07:44:17.737959"
+            },
+            {
+                "id": 52,
+                "action": "create_item",
+                "item_id": 47,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: SPD422-1, Quantity: 2",
+                "timestamp": "2024-09-26 07:44:40.526759"
+            },
+            {
+                "id": 53,
+                "action": "create_item",
+                "item_id": 48,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: EMERGENCY PB, Quantity: 3",
+                "timestamp": "2024-09-26 07:45:16.931707"
+            },
+            {
+                "id": 54,
+                "action": "create_item",
+                "item_id": 49,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: GMI (G9410S), Quantity: 98",
+                "timestamp": "2024-09-26 07:45:44.104901"
+            },
+            {
+                "id": 55,
+                "action": "create_item",
+                "item_id": 50,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: RJ45, Quantity: 4",
+                "timestamp": "2024-09-26 07:46:03.184922"
+            },
+            {
+                "id": 56,
+                "action": "create_item",
+                "item_id": 51,
+                "category_id": 2,
+                "quantity_change": null,
+                "description": "Created Item: RESISTOR, Quantity: 2",
+                "timestamp": "2024-09-26 07:46:18.833842"
+            },
+            {
+                "id": 57,
+                "action": "update_item",
+                "item_id": 51,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "The category_id was changed from '2' to '3'.",
+                "timestamp": "2024-09-26 07:47:29.758789"
+            },
+            {
+                "id": 58,
+                "action": "create_item",
+                "item_id": 52,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: HONEYWELL FLOW COMPUTER, Quantity: 1",
+                "timestamp": "2024-09-26 07:48:07.064470"
+            },
+            {
+                "id": 59,
+                "action": "create_item",
+                "item_id": 53,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: HONEYWELL VOLUME CONVERTER (EK280), Quantity: 8",
+                "timestamp": "2024-09-26 07:48:37.475108"
+            },
+            {
+                "id": 60,
+                "action": "create_item",
+                "item_id": 54,
+                "category_id": 3,
+                "quantity_change": null,
+                "description": "Created Item: HONEYWELL JUNCTION BOX (FE260), Quantity: 1",
+                "timestamp": "2024-09-26 07:48:54.722941"
+            }
+        ]
+    },
+    "alembic_version": {
+        "schema": {
+            "columns": [
+                {
+                    "name": "version_num",
+                    "type": "String",
+                    "nullable": false,
+                    "primary_key": true,
+                    "foreign_key": null
+                }
+            ]
+        },
+        "data": [
+            {
+                "version_num": "f34339205a6c"
+            }
+        ]
+    }
+}
