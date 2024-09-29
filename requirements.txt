@@ -1,4 +1,5 @@
-pip install sqlalchemy
-pip install pymysql  # If you're using MySQL
-pip install psycopg2  # If you're using PostgreSQL
+sqlalchemy
+pymysql  # If you're using MySQL
+psycopg2  # If you're using PostgreSQL
 pytest
+setuptools

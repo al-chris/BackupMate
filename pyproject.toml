@@ -8,76 +8,41 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-# Basic Project Information
-name = "your_package"
+name = "BackupMate"
 version = "0.1.0"
 description = "A package to backup and restore databases using SQLAlchemy."
 readme = "README.md"
 requires-python = ">=3.7"
-license = { text = "MIT" }
-
-# Authors and Maintainers
+license = {text = "MIT"}
 authors = [
-    { name = "Al Chris", email = "christopheraliu07@gmail.com" }
+    {name = "Al Chris", email = "christopheraliu07@gmail.com"}
 ]
 
-# Project URLs
-urls = { 
-    "Homepage" = "https://github.com/al-chris/your_package",
-    "Documentation" = "https://github.com/al-chris/your_package#readme",
-    "Source" = "https://github.com/al-chris/your_package",
-    "Tracker" = "https://github.com/al-chris/your_package/issues"
-}
-
-# Dependencies
 dependencies = [
     "SQLAlchemy>=1.4",
-    # Note: 'argparse' is included in the Python standard library for Python >=3.2
 ]
 
-# Optional (Development) Dependencies
-optional-dependencies = {
-    dev = [
-        "pytest>=6.0",
-        "pytest-mock>=3.0",
-        "flake8>=3.8",
-        "black>=22.0",
-        "coverage>=6.0"
-    ]
-}
+[project.urls]
+Homepage = "https://github.com/al-chris/BackupMate"
+Documentation = "https://github.com/al-chris/BackupMate#readme"
+Source = "https://github.com/al-chris/BackupMate"
+Tracker = "https://github.com/al-chris/BackupMate/issues"
 
-# Entry Points for CLI
-scripts = { 
-    "your-package" = "your_package.cli:main"
-}
-
-# Additional Metadata (Optional)
-keywords = [ "database", "backup", "restore", "SQLAlchemy", "CLI" ]
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Intended Audience :: Developers",
-    "Topic :: Database",
-    "Topic :: Software Development :: Libraries"
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-mock>=3.0",
+    "flake8>=3.8",
+    "black>=22.0",
+    "coverage>=6.0"
 ]
 
-# Specify package inclusion
-packages = [ "your_package" ]
-
-# Include non-Python files specified in MANIFEST.in
-include = [
-    "your_package/*.py",
-    "tests/*.py",
-    "README.md"
-]
+[project.scripts]
+backupmate = "BackupMate.cli:main"
 
 [tool.setuptools.packages.find]
-where = ["your_package"]
+where = ["BackupMate"]
 
-# Tool Configurations
-
-# Pytest Configuration
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-ra -q"
@@ -85,7 +50,6 @@ testpaths = [
     "tests",
 ]
 
-# Black Configuration (Optional)
 [tool.black]
 line-length = 88
 target-version = ['py38']
@@ -104,7 +68,6 @@ exclude = '''
 )/
 '''
 
-# Flake8 Configuration (Optional)
 [tool.flake8]
 max-line-length = 88
 extend-ignore = ["E203", "W503"]
@@ -115,4 +78,3 @@ exclude = [
     "dist",
     "venv",
 ]
-

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+BackupMate/BackupMate.egg-info/PKG-INFO
+BackupMate/BackupMate.egg-info/SOURCES.txt
+BackupMate/BackupMate.egg-info/dependency_links.txt
+BackupMate/BackupMate.egg-info/entry_points.txt
+BackupMate/BackupMate.egg-info/requires.txt
+BackupMate/BackupMate.egg-info/top_level.txt
