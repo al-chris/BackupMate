@@ -1,4 +1,4 @@
----
+pp---
 
 # Database Backup and Restore Script
 
@@ -37,7 +37,7 @@ Before using the script, ensure you have the following:
 
 ## Installation
 
-1. **Clone the Repository** *(if applicable)*:
+1. **Clone the Repository**:
 
    ```bash
    git clone https://github.com/yourusername/db-backup-restore.git
