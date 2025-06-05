@@ -1,5 +1,3 @@
-pp---
-
 # Database Backup and Restore Script
 
 A Python script to **backup** all data from a SQL database into a JSON file and **restore** it back into the database in case of data loss or database clearing.
