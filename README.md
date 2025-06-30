@@ -209,6 +209,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any questions or issues, please open an issue in the repository or contact [christopheraliu07@gmail.com](mailto:christopheraliu07@gmail.com).
+For any questions or issues, please open an issue in the repository or contact [christopheraliu07@gmail.com](mailto:christopheraliu07@gmail.com)
 
 ---
